@@ -1,5 +1,42 @@
-* {
+:root {
+    --black: hsl(0, 0%, 0%);
+    --dark-gray: hsl(0, 0%, 55%);
+    --very-dark-gray: hsl(0, 0%, 41%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*,
+*::after,
+*::before {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.header {
+    background-color: hsla(0, 0%, 0%, 40%);
+    background-image: url("../images/desktop/image-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    min-height: 40rem;
+}
+
+.header__container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__list {
+    display: flex;
 }
