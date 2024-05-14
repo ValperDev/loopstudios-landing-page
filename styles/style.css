@@ -5,20 +5,43 @@
     --white: hsl(0, 0%, 100%);
 }
 
+@font-face {
+    font-family: "Alata";
+    src: url("../fonts/Alata-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Josefin Sans";
+    src: url("../fonts/JosefinSans-Light.ttf") format("truetype");
+    font-weight: 300;
+}
+
 *,
 *::after,
 *::before {
     box-sizing: border-box;
+    font-family: "Alata", sans-serif;
     padding: 0;
     margin: 0;
 }
 
 a {
+    display: inline-block;
     text-decoration: none;
 }
 
 ul {
     list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+main {
+    max-width: 68rem;
 }
 
 .header {
@@ -39,4 +62,46 @@ ul {
 
 .nav__list {
     display: flex;
+}
+
+.creations__header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.creations__title {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.creations__link {
+    border: 1px solid var(--black);
+    color: var(--black);
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    padding: .3em 1.5em;
+}
+
+.creations__list {
+    display: grid;
+    gap: 1.4em;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.creations__item-link {
+    position: relative;
+}
+
+.creations__name {
+    bottom: 0;
+    color: var(--white);
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.2rem;
+    padding: 2em;
+    position: absolute;
+    text-transform: uppercase;
+    z-index: 1;
 }
